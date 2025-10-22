@@ -1,0 +1,15 @@
+<main class="favorites-container">
+  <header>
+    <h1>Mis Gatos Favoritos 😻</h1>
+  </header>
+
+  <section *ngIf="favorites.length > 0; else empty" class="gallery">
+    <div *ngFor="let image of favorites" class="cat-card">
+      <img [src]="image.url" alt="Cat image">
+    </div>
+  </section>
+
+  <ng-template #empty>
+    <p>No tienes gatos favoritos todavía 😿</p>
+  </ng-template>
+</main>

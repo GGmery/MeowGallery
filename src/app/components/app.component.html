@@ -6,11 +6,20 @@
     <p>Bienvenido a tu galería de gatos</p>
   </header>
 
+<nav>
+  <a routerLink="/">Inicio</a>
+  <a routerLink="/favorites">Favoritos</a>
+</nav>
+
+
   <section class="gallery">
     <div *ngIf="currentImage" class="cat-card">
       <img [src]="currentImage.url" alt="Cat image">
     </div>
 
     <button (click)="loadRandomCat()">Otro gato</button>
+    <button (click)="addToFavorites()">❤️ Guardar en Favoritos</button>
   </section>
+
+    <router-outlet></router-outlet>
 </main>
