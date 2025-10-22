@@ -1,0 +1,16 @@
+<!-- app.component.html -->
+
+<main class="main-container">
+  <header>
+    <h1>MeowGallery</h1>
+    <p>Bienvenido a tu galería de gatos</p>
+  </header>
+
+  <section class="gallery">
+    <div *ngIf="currentImage" class="cat-card">
+      <img [src]="currentImage.url" alt="Cat image">
+    </div>
+
+    <button (click)="loadRandomCat()">Otro gato</button>
+  </section>
+</main>
